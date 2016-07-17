@@ -21,6 +21,27 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="js/format-google-calendar.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script>
+    formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/paujivrkk0m017gp3g31hv0uuo@group.calendar.google.com/events?key=AIzaSyD49G_bQvuqMDziU4w2978LpAPucNu82nk',
+        past: true,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: -1,
+        upcomingTopN: 3,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Próximos eventos</h2>',
+        pastHeading: '<h3>Eventos Pasados</h3>',
+        format: ['*date*', ': ', '*summary*', ' || ', '*description*', ' en ', '*location*']
+});
+
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -138,6 +159,7 @@
             </div>
         </div>
     </section>
+
     <!-- Download Section -->
     <section id="download" class="content-section text-center">
         <div class="download-section">
@@ -154,9 +176,13 @@
     <section id="eventos" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Enterate de los proximos eventos</h2>
-                <p>Constantemente agendamos nuevas fechas de conciertos y eventos</p>
+                <ul id="events-upcoming">
+                </ul>
+                <ul id="events-past">
+                </ul>
+                <!--
                 <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=350&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=paujivrkk0m017gp3g31hv0uuo%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FSantiago" style="border:solid 1px #777" width="800" height="350" frameborder="0" scrolling="no"></iframe>
+                -->
             </div>
         </div>
     </section>
@@ -210,17 +236,12 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
