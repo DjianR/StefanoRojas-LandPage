@@ -254,9 +254,16 @@ a:focus {
 }
 
 .download-section {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  text-align: top;
+  /*
     width: 100%;
     padding: 50px 0;
     color: #999;
+    */
     background: url(../img/stefanofoto2web.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
