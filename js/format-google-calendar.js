@@ -126,13 +126,13 @@ var formatGoogleCalendar = (function() {
             format[i] = format[i].toString();
 
             if (format[i] === '*summary*') {
-                output = output.concat('<span class="summary">' + summary + '</span>');
+                output = output.concat('<strong> <span class="summary">' + summary.toUpperCase() + '</span> </strong>');
             } else if (format[i] === '*date*') {
                 output = output.concat('<span class="date">' + dateFormatted + '</span>');
             } else if (format[i] === '*description*') {
-                output = output.concat('<span class="description">' + description + '</span>');
+                output = output.concat('<span class="description">' +  description + '</span>');
             } else if (format[i] === '*location*') {
-                output = output.concat('<span class="location">' + location + '</span>');
+                output = output.concat('<em><span class="location">' + location + '</span></em>');
             } else {
                 if ((format[i + 1] === '*location*' && location !== '') ||
                     (format[i + 1] === '*summary*' && summary !== '') ||
@@ -168,7 +168,7 @@ var formatGoogleCalendar = (function() {
     //Get month name according to index
     var getMonthName = function(month) {
         var monthNames = [
-            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Augosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
         ];
 
         return monthNames[month];
@@ -179,7 +179,7 @@ var formatGoogleCalendar = (function() {
         var formattedTime = '';
 
         if (config.sameDayTimes) {
-            formattedTime = ' from ' + getFormattedTime(dateStart) + ' - ' + getFormattedTime(dateEnd);
+            formattedTime = ' desde ' + getFormattedTime(dateStart) + ' - ' + getFormattedTime(dateEnd);
         }
 
         //month day, year time-time

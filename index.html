@@ -33,12 +33,12 @@
         sameDayTimes: true,
         pastTopN: -1,
         upcomingTopN: 3,
-        itemsTagName: 'li',
+        itemsTagName: 'a href="#" class="list-group-item"',
         upcomingSelector: '#events-upcoming',
         pastSelector: '#events-past',
         upcomingHeading: '<h2>Próximos eventos</h2>',
         pastHeading: '<h3>Eventos Pasados</h3>',
-        format: ['*date*', ': ', '*summary*', ' || ', '*description*', ' en ', '*location*']
+        format: ['*date*', ': ', '*summary*', '<br> || ', '*description*', '|| <br>','<br> en ', '*location*']
 });
 
     </script>
@@ -166,9 +166,7 @@
         <div class="content">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>"Guía de acordes para bajo"</h2>
-                    <p>Ya puedes descargar el materíal de apoyo para acordes en bajo eléctrico</p>
-                    <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" target="_blank" class="btn btn-default btn-lg">Descargar</a>
+                    <p>Ya puedes <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" target="_blank" class="btn btn-default btn-lg">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>
                 </div>
             </div>
         </div>
@@ -176,7 +174,7 @@
     <!-- About Section -->
     <section id="eventos" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2 list-group">
                 <ul id="events-upcoming">
                 </ul>
                 <ul id="events-past">
