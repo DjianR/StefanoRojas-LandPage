@@ -88,8 +88,13 @@ a:focus {
     outline: 0;
 }
 
-.navbar-custom a {
+.navbar-custom  a {
+    color: #999;
+
+}
+.navbar-custom  li {
     color: #f5f5f5;
+
 }
 
 .navbar-custom .nav li.active {
