@@ -45,7 +45,7 @@
         sameDayTimes: true,
         pastTopN: 4,
         upcomingTopN: 6,
-        itemsTagName: 'a href="https://calendar.google.com/calendar/embed?src=paujivrkk0m017gp3g31hv0uuo%40group.calendar.google.com&ctz=America/Santiago&mode=AGENDA" target="_blank" class="list-group-item"',
+        itemsTagName: 'a href="https://calendar.google.com/calendar/embed?src=paujivrkk0m017gp3g31hv0uuo%40group.calendar.google.com&ctz=America/Santiago&mode=AGENDA" onclick="return ! window.open(this.href);" class="list-group-item"',
         upcomingSelector: '#events-upcoming',
         pastSelector: '#events-past',
         upcomingHeading: '<h2>Próximos eventos</h2>',
@@ -109,6 +109,9 @@
                         <a class="page-scroll" href="#download">Lanzamiento guía</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#blog">Blog!</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#eventos">Eventos</a>
                     </li>
                     <li>
@@ -164,22 +167,34 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Stefano Rojas</h2>
-                <p>Bajista y compositor, titulado en universidad <a href="http://www.uniacc.cl">UNIACC</a> con el grado de licenciado en Música & Sonido, mención Composición e Interpretación Musical. Actualmente trabaja en su proyecto solista de jazz fusión con Carmen Aguilera, Gonzalo Morales y Samuel Álvarez.</p>
-                          <br>         <br>         <br>      <br>         <br>         <br> <br><br> <br>
+                <p>Bajista y compositor, titulado en universidad <a href="http://www.uniacc.cl" onclick="return ! window.open(this.href);">UNIACC</a> con el grado de licenciado en Música & Sonido, mención Composición e Interpretación Musical. Actualmente trabaja en su proyecto solista de jazz fusión con Carmen Aguilera, Gonzalo Morales y Samuel Álvarez.</p>
+                          <br>         <br>         <br>      <br>         <br>         <br> <br><br> <br><br> <br>
             </div>
         </div>
     </section>
-
-    <!-- Download Section -->
+        <!-- Download Section -->
     <section id="download" class="download-section text-center">
         <div class="content">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>Ya puedes <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" target="_blank" class="btn btn-default btn-lg">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>
+                    <p>Ya puedes <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" onclick="return ! window.open(this.href);" class="btn btn-default btn-lg">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Blog section -->
+    <section id="blog" class="blog-section text-center">
+        <div class="content">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Nuevo blog!</h2>
+                    <p>En este espacio comparto algunos consejos y técnicas que te ayudarán con tu <a href="www.stefanorojas.com/blog" onclick="return ! window.open(this.href);" >estudio musical</a>, ya sea en el bajo eléctico o música teorica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- About Section -->
     <section id="eventos" class="container content-section text-center">
         <div class="row">
@@ -206,7 +221,7 @@
         <br>
         <div class="col-sm-4">
 
-          <a href="https://www.facebook.com/AlmaLuthiers" target="_blank">
+          <a href="https://www.facebook.com/AlmaLuthiers" onclick="return ! window.open(this.href);">
 
             <img src="img/alma.png" class="img-circle person" alt="Random Name" width="255" height="255">
           </a>
@@ -215,7 +230,7 @@
         </div>
         <div class="col-sm-4">
 
-          <a href="http://linuxcorp.cl/" target="_blank">
+          <a href="http://linuxcorp.cl/" onclick="return ! window.open(this.href);">
 
             <img src="img/linuxcorp.png" class="img-circle person" alt="Random Name" width="255" height="255">
           </a>
@@ -224,7 +239,7 @@
         </div>
         <div class="col-sm-4">
 
-          <a href="https://ubuntustudio.org/" target="_blank">
+          <a href="https://ubuntustudio.org/" onclick="return ! window.open(this.href);">
 
             <img src="img/ubuntu.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
           </a>
