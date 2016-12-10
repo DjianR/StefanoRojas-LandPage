@@ -54,14 +54,28 @@
 });
 
     </script>
-<script type="text/javascript">
+    <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
+<!--<script type="text/javascript">
     window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
     c.charset='utf-8';c.src='//rec.getsmartlook.com/recorder.js';h.appendChild(c);
     })(document);
     smartlook('init', 'ab61f34d2cccb63a582b8a042545febe51796df8');
-</script>
+</script>-->
+    <!--facebook-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=888192351317408";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -82,7 +96,6 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -135,10 +148,13 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                       </li>
-                      <a href="" title="" class="btn btn-lg"><img src="http://counter6.fcs.ovh/private/contadorvisitasgratis.php?c=3cd9ddc3a0452fe60db9ae851263914f" border="0" title="contador de visitas" alt="contador de visitas"></a>
                       <a class="animated fadeIn" href="https://www.facebook.com/Stefano.Rojas.Musico" onclick="return ! window.open(this.href);"><li id="facebook" class="icon-facebook facebook"></li></a>
                       <a class="animated fadeIn" href="https://www.youtube.com/user/stefanorojas" onclick="return ! window.open(this.href);"><li id="youtube" class="icon-youtube"></li></a>
                       <a class="animated fadeIn" href="mailto:contacto@stefanorojas.com" onclick="return ! window.open(this.href);"><li id="email" class="icon-email"></li></a>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FStefano.Rojas.Musico%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=false&height=80&appId=888192351317408" width="550" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    <!--<a href="" title="" class="btn btn-lg"><img src="http://counter6.fcs.ovh/private/contadorvisitasgratis.php?c=3cd9ddc3a0452fe60db9ae851263914f" border="0" title="contador de visitas" alt="contador de visitas"></a>-->
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -177,10 +193,40 @@
         <div class="content">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>Ya puedes <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" onclick="return ! window.open(this.href);" class="btn btn-default btn-lg">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>
+                    <!--<p>Ya puedes <a href="https://docs.google.com/forms/d/1NsGmQx5O8le36ZD_tbtuIA8jYQUbCB3aKKEOaYxLhGc/viewform" onclick="return ! window.open(this.href);" class="btn btn-default btn-lg">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>-->
+                    <p>Ya puedes<a class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Descargar</a> la guía de apoyo para acordes en bajo eléctrico</p>
+
+
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <div id="sinlike">
+            <p>Solo cobramos un meGusta</p>
+
+          </div>
+
+
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--fin modal-->
     </section>
     <!-- Blog section -->
     <section id="blog" class="blog-section text-center">
@@ -258,6 +304,7 @@
         <div class="container text-center">
             <p>Copyright &copy; <a href="www.thelema.cl"><em>Thelema software</em></a></p>
         </div>
+
     </footer>
 
 
